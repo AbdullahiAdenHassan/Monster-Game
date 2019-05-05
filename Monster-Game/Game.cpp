@@ -178,6 +178,7 @@ void CGame::ShowGame(void)
 
 void CGame::ShowWon(void)
 {
+	
 	ShowGame();
 
 	COORD Position;
