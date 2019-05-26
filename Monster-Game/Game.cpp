@@ -258,7 +258,7 @@ void CGame::ShowExit(void)
 	m_Console->SetTextColor(1);
 	m_Console->Clear();
 	m_Console->OutputString("\n   Monster 1.0 \n\n\n");
-	m_Console->OutputString("by: Bruno Sousa (bsousa@fireworks");
+	m_Console->OutputString("by: Abdullahi Aden Hassan");
 	m_Console->OutputString("-interactive.com)\n\n\n\n");
 	m_Console->OutputString("Thanks for playing!\n\n\n");
 	m_Console->OutputString("And remember, stay away from drugs.\n\n");
