@@ -420,7 +420,7 @@ void CGame::ProcessGame(void)
 		MoveMonsters();
 		CheckCollisions();
 
-		/* Check to se if any monster is alive */
+		/* Check to see if any monster is alive */
 		MonsterAlive = 0;
 		for (Monster = 0; Monster < m_MonstersNumber; Monster++)
 		{
@@ -519,12 +519,12 @@ void CGame::Process(void)
 {
 	/* General function that does all tasks for this turn.
 	Since the Since the splash screen must be shown when we begin,
-	we mustforce it to be shown because there is no action pending */
+	we must force it to be shown because there is no action pending */
 	if (m_GameStatus == GameSplashScreen) //GameSplashScreen = 8.
 	{
 		Show();
 	}
-	/* If user presses a Key, act accotdingly */
+	/* If user presses a Key, act accordingly */
 	if (GetAction())
 	{
 		switch (m_GameStatus)
@@ -569,7 +569,7 @@ void CGame::StartNewGame(int Difficulty)
 
 	m_GameStatus = GameRunning; // GameRunning = 2.
 
-	/* Set game difficulry */
+	/* Set game difficulty */
 	switch (Difficulty)
 	{
 		//GameEasy = 1.
@@ -607,7 +607,7 @@ void CGame::StartNewGame(int Difficulty)
 	m_Monsters = new COORD[m_MonstersNumber];
 	srand(time(NULL));
 
-	/* Calculate random positons for monsters */
+	/* Calculate random positions for monsters */
 	for (Monster = 0; Monster < m_MonstersNumber; Monster++)
 	{
 		/* Make sure position is different than player's position */
@@ -661,13 +661,13 @@ void CGame::CheckCollisions()
 				}
 				return;
 			}
-			/* Check fo collisions with other monsters */
+			/* Check for collisions with other monsters */
 			for (MonsterB = MonsterA + 1; MonsterB < m_MonstersNumber; MonsterB++)
 			{
 				/* Check if monster is dead */
 				if (m_Monsters[MonsterB].X != 0)
 				{
-					/* Check for collision with monsters */
+					/* Check collision with monsters */
 					if ((m_Monsters[MonsterA].X == m_Monsters[MonsterB].X) &&
 						(m_Monsters[MonsterA].Y == m_Monsters[MonsterB].Y))
 					{
@@ -695,7 +695,7 @@ int CGame::GetStatus(void)
 
 void CGame::MoveMonsters(void)
 {
-	/* Move monsters according to player positon */
+	/* Move monsters according to player position */
 	COORD Distance, Position;
 	int Monster;
 
